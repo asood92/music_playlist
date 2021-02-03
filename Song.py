@@ -37,9 +37,9 @@ class Song:
         self.__next_song = next_song
 
     def __str__(self):
-        """ Simple __str__ dunder for output"""
+        """ Simple __str__ dunder for object address output"""
         return f"{self.__title}"
 
     def __repr__(self):
-        """ Simple ___repr___ dunder for output"""
+        """ Simple ___repr___ dunder for useful output"""
         return f"{self.__title} -> {self.__next_song}"
