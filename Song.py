@@ -1,35 +1,45 @@
 class Song:
+    def __init__(self, title):
+        self.__title = title
+        self.__next_song = None
 
-  def __init__(self, title):
-      self.__title = title
-      self.__next_song = None
+    def get_title(self):
+        """
+        Simple getter for the title
+        Returns:
+          self.__title: string, title of the song
+        """
+        return self.__title
 
+    def set_title(self, title):
+        """
+        Simple setter for the title, performs title casing before returning title
+        Returns:
+          self.__title: string, properly cased song title
+        """
+        titleCased = title.title()
+        self.__title = titleCased
 
-  # TODO: Create a getter method for the title attribute, called get_title
-  def get_title(self):
-    pass
-  
-  
-  # TODO: Create a setter method for the next_song attribute, called set_title. Make sure titles are type cased to strings and are Title Cased.
-  def set_title(self, title):
-    pass
+    def get_next_song(self):
+        """
+        Simple getter for the next song
+        Returns:
+          self.__next_song: string, title of the song
+        """
+        return self.__next_song
 
+    def set_next_song(self, next_song):
+        """
+        Setter function for the next song object.
+        Returns:
+          self.__next_song:   str, next song name
+        """
+        self.__next_song = next_song
 
-  # TODO: Create a getter method for the next_song attribute, called get_next_song
-  def get_next_song(self):
-    pass
+    def __str__(self):
+        """ Simple __str__ dunder for output"""
+        return f"{self.__title}"
 
-
-  # TODO: Create a setter method for the next_song attribute, called set_next_song
-  def set_next_song(self, next_title):
-    pass
-
-
-  # TODO: Using the __str___ dunder method, return a string of the song title.
-  def __str__(self):
-    pass
-
-
-  # TODO: Using the __repr__ dunder method, return a string formatted as the following:'Song Title -> Next Song Title'
-  def __repr__(self):
-    pass
+    def __repr__(self):
+        """ Simple ___repr___ dunder for output"""
+        return f"{self.__title} -> {self.__next_song}"
